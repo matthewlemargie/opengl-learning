@@ -1,9 +1,9 @@
 #ifndef	VAO_CLASS_H
 #define	VAO_CLASS_H
 
-#include <glew/include/GL/glew.h>
+#include <GL/glew.h>
 #include <GLFW/glfw3.h>
-#include <gl/GL.h>
+#include <GL/gl.h>
 #include "VBO.h"
 
 class VAO

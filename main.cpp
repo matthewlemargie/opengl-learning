@@ -1,10 +1,10 @@
 #define GLM_ENABLE_EXPERIMENTAL
-#include <glew/include/GL/glew.h>
+#include <GL/glew.h>
 #include <glm/gtx/string_cast.hpp>
 #include <glm/glm.hpp>
 #include <vector>
 #include <GLFW/glfw3.h>
-#include <gl/GL.h>
+#include <GL/gl.h>
 #include <iostream>
 #include <random>
 
@@ -75,8 +75,8 @@ int main(void)
     }
 
     // initialize meshes/camera/shaders/scene/lights
-    Mesh woman("C:/Users/matth/Downloads/woman_low.obj", "C:/Users/matth/Downloads/woman_med.obj", "C:/Users/matth/Downloads/woman_high.obj");
-    Mesh box("C:/Users/matth/Downloads/box.obj", "C:/Users/matth/Downloads/box.obj", "C:/Users/matth/Downloads/box.obj");
+    // Mesh woman("C:/Users/matth/Downloads/woman_low.obj", "C:/Users/matth/Downloads/woman_med.obj", "C:/Users/matth/Downloads/woman_high.obj");
+    Mesh box("box.obj", "box.obj", "box.obj");
 
     Camera camera(mode->width, mode->height, glm::vec3(4.0f, 0.0f, 0.0f), 90.0f, 1.0f, 1000.0f);
     Camera camera2(mode->width, mode->height, glm::vec3(4.0f, 0.0f, 0.0f), 45.0f, 1.0f, 200.0f);
@@ -95,7 +95,7 @@ int main(void)
     float timeValue = 0;
     float phase = 2.0f * 0.015625f;
 
-	scene.addObject(woman, shader, transform);
+	scene.addObject(box, shader, transform);
 
 	glClearColor(0.07f, 0.13f, 0.17f, 1.0f);
     glEnable(GL_DEPTH_TEST);
@@ -106,12 +106,12 @@ int main(void)
 
 		timeValue = glfwGetTime();
 		lightPos = 10.0f * glm::vec3(sin(timeValue), 0.5f * sin(8.0f * timeValue), cos(timeValue));
-        scale = 20.0f + abs(1.0f * cos(2.0f * timeValue));
+        scale = 5.0f + abs(1.0f * cos(2.0f * timeValue));
 
         if (glfwGetKey(window, GLFW_KEY_N) == GLFW_PRESS) {
             for (int i = 0; i < 1; ++i) {
                 transform = glm::translate(glm::mat4(1.0f), 200.0f * glm::vec3(generateFromNormal(), generateFromNormal(), generateFromNormal()));
-                woman.addInstance(transform);
+                box.addInstance(transform);
             }
         }
 

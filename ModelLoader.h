@@ -2,7 +2,7 @@
 #ifndef MODEL_CLASS_H
 #define MODEL_CLASS_H
 
-#include <glew/include/GL/glew.h>
+#include <GL/glew.h>
 #include <glm/glm.hpp>
 #include <iostream>
 #include <fstream>
@@ -10,7 +10,6 @@
 #include <map>
 #include <vector>
 #include <string>
-#include "Mesh.h"
 #include "VBO.h"
 
 class Model

@@ -1,0 +1,1 @@
+g++ -o main main.cpp Camera.cpp ModelLoader.cpp shaderClass.cpp Texture.h VBO.cpp calculateRays.cpp Camera.h EBO.cpp Mesh.cpp ModelLoader.h Scene.cpp shaderClass.h VAO.cpp VBO.h calculateRays.h EBO.h Mesh.h Scene.h Texture.cpp VAO.h -lGL -lGLEW -lglfw

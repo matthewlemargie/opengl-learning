@@ -2,10 +2,10 @@
 #ifndef VBO_CLASS_H
 #define VBO_CLASS_H
 
-#include<glew/include/GL/glew.h>
+#include <GL/glew.h>
 #include <iostream>
-#include <gl/GL.h>
-#include <glm.hpp>
+#include <GL/gl.h>
+#include <glm/glm.hpp>
 #include <vector>
 
 struct Vertex
